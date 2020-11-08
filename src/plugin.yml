@@ -1,0 +1,10 @@
+name: TownyPearls
+main: com.github.jena.TownyPearlsMain
+version: 1.0.0
+author: Jena
+depend: Towny
+
+permissions:
+  townypearls:
+    default: false
+    description: Allows players to use infinite ender pearls in towns.
