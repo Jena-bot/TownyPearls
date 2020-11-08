@@ -1,8 +1,8 @@
 name: TownyPearls
-main: com.github.jena.TownyPearlsMain
+main: com.github.Jena.TownyPearlsMain
 version: 1.0.0
 author: Jena
-depend: Towny
+depend: [Towny]
 
 permissions:
   townypearls:

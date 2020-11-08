@@ -20,12 +20,13 @@ public class TownyPearlsMain extends JavaPlugin implements Listener {
     }
 
     @EventHandler
-    public void onEnderPearl(ProjectileLaunchEvent event) {
+    public void onEnderPearl(ProjectileLaunchEvent event) throws InterruptedException {
         if (event.getEntity() instanceof EnderPearl) {
             if (event.getEntity().getShooter() instanceof Player) {
                 Player p = (Player) event.getEntity().getShooter();
                 boolean itemuse = PlayerCacheUtil.getCachePermission(p, event.getLocation(), Material.ENDER_PEARL, TownyPermission.ActionType.ITEM_USE);
                 if (p.hasPermission("townypearls") && itemuse) {
+                    wait(10);
                     p.getInventory().addItem(new ItemStack(Material.ENDER_PEARL, 1));
                 }
             }
